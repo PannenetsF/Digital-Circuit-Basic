@@ -1,0 +1,82 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear]{elegantpaper}
+
+\input{needed.tex}
+
+\title{数字电路基础\quad 第二周作业}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：3.11， 3.12，3.13
+
+\homep{3.11}
+
+对电压端进行戴维南等效：
+
+\[V_{eq} = -10 + \frac{18}{18 + 5.1}(V_i + 10)\]
+
+\[R_{eq} = 5.1 // 18 \approx 4 k\Omega\] 
+
+输入为高 \(V_{eq,h} \approx 1.7V\)， 为低\(V_{eq,l} \approx -2.2V\)
+
+\[\begin{aligned}
+    I_b &= \frac{1.7 - 0.7}{4 k} \approx 0.25 mA \\
+    V_o &= 10 - 0.25 * 30 = 2.5 V > V_{CE,sat}
+\end{aligned}\]
+
+可以有效截止，但是不满足饱和条件，需要使 C 极电流变大，调节 \(V_{ih} = 6.7 V\) ， \(V_{eq,h} \approx 3V\)
+
+\[\begin{aligned}
+    I_b &= \frac{3 - 0.7}{4 k} \approx 0.325 mA \\
+    V_o &= 10 - 0.325 * 30 = 0.25 V > V_{CE,sat}
+\end{aligned}\]
+
+还可以调节 \(\beta\) 值或者减少 \(R_1\)
+
+\homep{3.12}
+
+饱和时：
+
+\[I_b = \frac{5-0.1}{(2k)\cdot 50} = 4.9 \cdot 10^{-5} A\]
+
+存在输入时，戴维南等效
+
+\[R_{be} = 4.7 // 18 = 3.73 k\Omega\]
+
+\(V = V_{ih} = 5V\) 时 
+
+\[V_{eq} = 5 - 4.7 \frac{13}{22.7} = 2.3V\]
+
+\[I_B = \frac{2.3 - 0.7}{22.7} = 0.42 mA\]
+
+已经饱和， \(V_o = 0.1 V\)
+
+\(V = V_{il} = 0V\) 时 \(V_{eq} < 0 \) 必然截止， \(V_o = 5V\)
+
+输入悬空时 
+
+\[V_{eq} = 5 - \frac{13}{25.7}7.7 = 1.1 V\] 
+
+\[I_B = \frac{0.4}{3.73 K} = 0.11 mA\] 已经饱和，\(V_o = 0.1V\)
+
+\homep{3.13}
+
+通过拆分不同级进行计算：
+
+a) 与级 + 倒向 + 偏压 + 倒向 + 输出 ： \((A \cdot B)'' = A \cdot B\)
+
+b) 输入 + 或非 + 偏压 + 倒向 + 输出 ： \((A + B)'' = A + B\)
+
+c) 输入 + 或非 + 输出 ： \((A + B)'\)
+
+d) 或非 + 三态反相器 ： \(A' (G_1 + G_2)' + Z (G_1 + G_2)\)
+
+% Start Here
+
+% End Here
+
+\end{document}
