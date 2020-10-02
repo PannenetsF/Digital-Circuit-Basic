@@ -1,0 +1,264 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear,twocolumn]{elegantpaper}
+
+\input{needed.tex}
+
+\title{数字电路基础\quad 第三周作业：张悦老师}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：2.1-(2,6,7)；
+2.15-(2,5,8,9)；
+2.20-(c,d)；
+2.10-(2,4)；
+2.11-(4,5)；
+2.18-(6,7)；
+2.18-(8)；
+2.19-(2,5)；
+2.2-(2,3)；
+2.12-(1,3)；
+2.13-(2,3)
+2.22-(1,4)
+
+% \setlength{\columnseprule}{0.4pt}
+% \begin{multicols*}{2}
+
+\homep{2.1}
+
+\subhomep{2}
+
+\begin{table}[htb]
+    \centering
+    \caption{2.1.2}
+    \label{tab:my-table}
+    \begin{tabular}{ccc}
+        \hline
+        \(A\)         & 0 & 1 \\ \hline
+        \(A\oplus 1\) & 1 & 0 \\
+                    % &   &   \\ 
+                    \hline
+    \end{tabular}
+\end{table}
+
+\subhomep{6}
+
+\begin{table}[htb]
+    \centering
+    \caption{2.1.6}
+    \label{tab:my-table}
+    \begin{tabular}{ccccc}
+    \hline
+    \(A\) & \(B\) & \(C\) & \(A(B\oplus C)\) & \(AB\oplus AC\) \\ \hline
+    0     & 0     & 0     & 0                & 0               \\
+    0     & 0     & 1     & 0                & 0               \\
+    0     & 1     & 0     & 0                & 0               \\
+    0     & 1     & 1     & 0                & 0               \\
+    1     & 0     & 0     & 0                & 0               \\
+    1     & 0     & 1     & 1                & 1               \\
+    1     & 1     & 0     & 1                & 1               \\
+    1     & 1     & 1     & 0                & 0               \\ \hline
+    \end{tabular}
+\end{table}
+
+\subhomep{7}
+
+\begin{table}[htb]
+    \centering
+    \caption{2.1.7}
+    \label{tab:my-table}
+    \begin{tabular}{cccc}
+    \hline
+    \(A\) & \(B\) & \((A\oplus B)'\) & \(A\oplus B\oplus 1\) \\ \hline
+    0     & 0     & 1                & 1                     \\
+    0     & 1     & 0                & 0                     \\
+    1     & 0     & 0                & 0                     \\
+    1     & 1     & 1                & 1                     \\ \hline
+    \end{tabular}
+\end{table}
+% Start Here
+
+\homep{2.15}
+
+\subhomep{2}
+
+\[
+\begin{aligned}
+    Y &= AB'C + A' + B + C' \\ 
+    &= B'C + A' + B + C' \\
+    &= C + A' + B + C' \\ 
+    &= 1
+\end{aligned}    
+\]
+
+\subhomep{5}
+
+\[
+\begin{aligned}
+    Y &= AB'(A'CD + (AD + B'C')')(A'+B) \\
+    &= (AB'A'CD + AB'((A'+D')(B+C))) \\
+    & \quad\quad\quad\quad\quad (A'+B) \\ 
+    &= AB'D'(B+C)(A'+B) \\
+    &= AB'CD'(A'+B) \\ 
+    &= 0
+\end{aligned}    
+\]
+
+\subhomep{8}
+
+\[\begin{aligned}
+    Y &= A + (B+C')'(A+B'+C)(A+B+C) \\
+    &= A + (B'C)(A+B'+C)(A+B+C) \\
+    &= A + (B'C)(A+AB'+AC+\\
+    &\quad\quad\quad\quad\quad AB+BC+AC+B'C+C) \\
+    &= A + (B'C)(A+BC+B'C+C) \\ 
+    &= A + B'C(A+C) \\ 
+    &= A + AB'C + B'C \\ 
+    &= A + B'C
+\end{aligned}\]
+
+\subhomep{9}
+
+\[\begin{aligned}
+    Y &= BC' + ABC'E + B'(A'D'+AD)' \\
+    &\quad\quad\quad\quad\quad + B(AD'+A'D) \\
+    &= BC' + B'(A+D)(A'+D') \\
+    &\quad\quad\quad\quad\quad + B(AD'+A'D) \\ 
+    &= BC' + B'(A'D+AD') + B(AD'+A'D) \\ 
+    &= BC' + AD' + A'D
+\end{aligned}\]
+
+\homep{2.20}
+
+\subhomep{c}
+
+\[\begin{aligned}
+    Y_1 &= ((AB')'(AD'C)')' \\
+    &= ((A'+B)(A'+C'+D))' \\
+    &= (A' + A'B + A'C' +BC' +A'D +BD)'\\
+    &= (A' +BC' +BD)'\\
+    &= A(BC')'(BD)' \\
+    &= A(B'+C)(B'+D') \\
+    &= (AB' + ACD')\\
+    % 1000 1001 1010 1011 1010 1110
+    % 8 9 10 11 10 14 
+    &= \sum m(8,9,10,11,14) 
+\end{aligned}\]
+
+\[\begin{aligned}
+    Y_2 &= ((AB')' (AC'D')' (A'C'D)' (ACD)')' \\
+    &= (AB') + (AC'D') + (A'C'D) + (ACD) \\
+    % 10xx, 1x00, 0x01, 1x11
+    &= \sum m(1, 5, 8, 9, 10, 11, 12, 15)
+\end{aligned}\]
+
+\subhomep{d}
+
+\[\begin{aligned}
+Y_1 &= (AB) + (C(A\oplus B)) \\
+&= AB + C(A'B + AB') \\
+&= AB + A'BC + AB'C \\ 
+% 110 111 011 101
+&= \sum m(3, 5, 6, 7)
+\end{aligned}\]
+
+\[\begin{aligned}
+Y_2 &= A\oplus B\oplus C \\
+&(\text{真值为1时，输入为 001 111 101 011 })\\
+&= \sum m(1, 3, 5, 7)
+\end{aligned}\]
+
+\homep{2.10}  实际上还是求与或形式
+
+\subhomep{2}
+
+\[\begin{aligned}
+Y &= AB’C'D + BCD + A'D \\
+% 1001 0111 1111 0001 0011 0101 0111
+&= \sum m(1, 3, 5, 7, 9, 15)
+\end{aligned}\]
+
+\subhomep{4}
+
+\[\begin{aligned}
+Y &= AB + ((BC)'(C'+D'))' \\ 
+&= AB + (BC + CD) \\ 
+% 11xx x11x xx11
+&= \sum m(3,  6, 7, 11,12, 13, 14, 15)
+\end{aligned}\]
+
+\homep{2.11}
+
+\subhomep{4}
+
+\[\begin{aligned}
+Y &= BCD' + C + A'D \\
+&= C + A'D \\
+% C = 0 & A' = 0, D = 0
+% 1x0x xx00 
+&= \prod M(0, 4, 8, 9, 12, 13)
+\end{aligned}\]
+
+\subhomep{5}
+
+\[
+% \begin{aligned}
+Y = \prod M(0, 3, 5)
+% \end{aligned}    
+\]
+
+\homep{2.18}
+
+\subhomep{6}
+
+即在输入为 000, 001, 010, 101, 110, 111 时结果为 1 。建立卡诺图，如\figref{p1}，结果为 \(A'B' + AC + BC'\)
+
+\qfig[p1]{hw03p1.png}{2.18.6 卡诺图}
+
+\subhomep{7}
+
+即在输入为 0000, 0001, 0010, 0101, 1000, 1001, 1010, 1100, 1110 时结果为 1，建立卡诺图如\figref{p2}，结果为 \(B'C' + AC'D' + A'C'D + ACD' + B'CD'\) 。
+
+
+\qfig[p2]{hw03p2.png}{2.18.7 卡诺图}
+
+
+\subhomep{8}
+
+即在输入为 001，100，111 时结果为 1 ，建立卡诺图如\figref{p3} ，结果为\(A'B'C + AB'C' + ABC\)。
+
+\qfig[p3]{hw03p3.png}{2.18.8 卡诺图}
+
+\homep{2.19}
+
+\subhomep{2}
+
+\[\begin{aligned}
+Y &= A'(CD'+C'D) + BC'D + AC'D\\
+&\quad\quad\quad\quad\quad  + A'CD' \\ 
+&= A'CD' + C'D
+\end{aligned}\]
+
+\subhomep{5}
+
+\[\begin{aligned}
+    Y &= (AB'C'D + AC'DE + B'DE' + \\
+    &\quad\quad AC'D'E)' \\ 
+    &= (AB'C'D + B'DE' + AC'E)' \\
+    &= (AC'(B'D + E) + B'DE)' \\ 
+    &= ((AC')' + (B'D)' E') ((B'D)' + E') \\
+    &= (A'+C)(B+D') + (A'+C)E'\\
+    &\quad\quad\quad\quad\quad  + (B+D')E' \\
+    % &= A'B + BC + A'D' + CD' + A'E' + CE' \\
+    % &\quad\quad\quad\quad\quad + BE' + D'E' \\
+    &= A'B + A'D' + A'E' + BC + BE' \\
+    &\quad\quad\quad\quad\quad + CD'  + CE' + D'E'
+\end{aligned}\]
+% End Here
+
+
+% \end{multicols*}
+\end{document}
