@@ -257,6 +257,111 @@ Y &= A'(CD'+C'D) + BC'D + AC'D\\
     &= A'B + A'D' + A'E' + BC + BE' \\
     &\quad\quad\quad\quad\quad + CD'  + CE' + D'E'
 \end{aligned}\]
+
+\homep{2.2}
+
+\subhomep{2}
+
+\[
+\begin{aligned}
+&(A+C')(B+D)(B+D') \\
+=&(A+C')(B+BD+BD') \\ 
+=&(A+C')B \\
+=&AB+BC'
+\end{aligned}    
+\]
+
+\subhomep{3}
+
+\[\begin{aligned}
+&((A+B+C')'C'D)'\\
+& \quad\quad\quad\quad +(B+C')(AB'D+B'C')\\
+&= (A'B'CC'D)' \\
+& \quad\quad\quad\quad +(AB'C'D+B'C')\\
+&= 1 +(AB'C'D+B'C') \\
+&= 1 
+\end{aligned}\]
+
+\homep{2.12}
+
+本题目的电路图通过 logisim 进行绘制
+
+\subhomep{1}
+
+如\figref{p4}
+
+\[\begin{aligned}
+Y &= (AB+BC+AC)'' \\
+&= ((AB)' (BC)' (AC)')' \\
+\end{aligned}\]
+
+\qfig[p4]{hw03p4.png}{2.12.1 电路}
+
+\subhomep{3}
+
+如\figref{p5}
+
+\[\begin{aligned}
+    Y &= ((ABC')' (AB'C)' (A'BC)')''\\
+    &= (((ABC')' (AB'C)' (A'BC)')' 1)'
+\end{aligned}\]
+
+\qfig[p5]{hw03p5.png}{2.12.3 电路}
+
+\homep{2.13}
+
+本题目的电路图通过 logisim 进行绘制
+
+\subhomep{2}
+
+如\figref{p6}
+
+\[\begin{aligned}
+    Y &= ((A+C)(A'+B+C')(A'+B'+C))'' \\
+    &= ((A+C)' + (A'+B+C')' \\
+    & \quad\quad + (A'+B'+C))' 
+\end{aligned}\]
+
+\qfig[p6]{hw03p6.png}{2.13.2 电路}
+\subhomep{3}
+
+如\figref{p7}
+
+\[\begin{aligned}
+    Y &= ((ABC' + B'C)'D' + A'B'D)'' \\
+    &= (((ABC' + B'C)'D')' (A'B'D)' )'\\
+    &= ((ABC'+B'C + D) (A+B+D'))' \\
+    &= (ABC'+B'C + D)' + (A+B+D')' \\
+    &= ((((A'+B'+C)' + (B+C')' + D)' \\
+    & \quad\quad + (A+B+D')' )' + 0)' 
+\end{aligned}\]
+
+\qfig[p7]{hw03p7.png}{2.13.3 电路}
+\homep{2.22}
+
+\subhomep{1}
+
+\[
+\begin{aligned}
+Y_1 &= AB'C'+ ABC + A'B'C + A'BC' \\
+& \quad + A'B'C' + A'BC + A'B'C' + A'BC \\
+&= B'C'+BC+A'B'+A'B
+\end{aligned}    
+\]
+
+\subhomep{4}
+
+\[
+\begin{aligned}
+Y_4 &= (AB'+B)CD' + ((A+B)(B'+C))' \\
+&= AB'CD' + BCD' + A'B' + BC' \\
+&= AB'CD' + BCD' + A'B' + BC' \\
+& + ABCD' + ACD + BCD \\
+&= AC + BC + A'B' + BC' \\
+&= AC + B + A'B'
+\end{aligned}    
+\]
+
 % End Here
 
 
