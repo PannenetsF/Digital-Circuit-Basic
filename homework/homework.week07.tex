@@ -1,0 +1,71 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear, twocolumn]{elegantpaper}
+
+\input{needed.tex}
+
+\title{数字电路基础\quad 第七周作业}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：5.14， 5.15， 5.16， 5.26
+
+\homep{5.14}
+
+只需考虑上升沿的状态，由于这系列时间内 \(R_D'\) 为高，只考虑 \(D\) 。如 \figref{1} 。
+
+\qfig[1]{h7p1.png}{}
+
+
+\homep{5.15}
+
+JK 触发器规则为 \(Q^{n+1} = J Q^n {'} + K'Q^n\) ，那么在每个上升沿有：
+
+\[\begin{aligned}
+    init: Q &= 0\\
+    clk0: Q &= 0 + 1 \& 0 = 0 \\
+    clk1: Q &= 0 + 0 = 0 \\
+    clk2: Q &= 1 \&  1 + x = 1 \\
+    clk3: Q &= 0 + 0 = 0\\
+    clk4: Q &= 1 
+\end{aligned}\]
+
+绘制如 \figref{2}
+
+\qfig[2]{h7p2.png}{}
+
+\homep{5.16}
+
+T 触发器观察下降沿采样即可。设初值 Q 为 0 。绘制如 \figref{3}
+
+\qfig[3]{h7p3.png}{}
+
+\homep{5.26}
+
+JK 端子均接高，那么 \(Q^{n+1} = J Q^n {'} + K'Q^n = Q^n {'}\) ，均接 \(Q_2\) 为 \(Q_3^{n+1} = Q_2 Q_3^n {'} + Q_2'Q_3^n = Q_2 \otimes Q_3^n\) 。但是需要注意到，实际上时钟有的来自之前信号的下降沿。
+
+在每个 CLK 下降沿： 
+\[\begin{aligned}
+    init&: Q_1 = 0, Q_2 = 0, Q_3 = 0 \\
+    clk0&: Q_1 = 1(Q_1' \downarrow), Q_2 = 1, Q_3 = 0 \\ 
+    clk1&: Q_1 = 0(Q_1 \downarrow), Q_2 = 1, Q_3 = 1 \\ 
+    clk2&: Q_1 = 1(Q_1' \downarrow), Q_2 = 0, Q_3 = 1 \\ 
+    clk3&: Q_1 = 0(Q_1 \downarrow), Q_2 = 0, Q_3 = 1 \\ 
+    clk4&: Q_1 = 1(Q_1' \downarrow), Q_2 = 1, Q_3 = 1 \\ 
+    clk5&: Q_1 = 0(Q_1 \downarrow), Q_2 = 1, Q_3 = 0 \\ 
+    clk6&: Q_1 = 1(Q_1' \downarrow), Q_2 = 0, Q_3 = 0 \\ 
+    clk7&: Q_1 = 0(Q_1 \downarrow), Q_2 = 0, Q_3 = 0 \\
+    &\text{Return to the init}\\
+\end{aligned}\]
+
+绘制如 \figref{4}
+
+\qfig[4]{h7p4.png}{}
+% Start Here
+
+% End Here
+
+\end{document}
