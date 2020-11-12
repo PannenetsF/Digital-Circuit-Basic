@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  11 NOV 2020 00:00
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  12 NOV 2020 19:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -828,6 +828,8 @@ File: figure/h8.png Graphic file (type bmp)
 <figure/h8.png>
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 39.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 70.
 [1
 
 ]
@@ -835,22 +837,30 @@ File: figure/hw08p1.png Graphic file (type bmp)
 <figure/hw08p1.png>
 File: figure/hw08p2.png Graphic file (type bmp)
 <figure/hw08p2.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
  [2] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
+File: figure/hw08p3.png Graphic file (type bmp)
+<figure/hw08p3.png>
+File: figure/hw08p4.png Graphic file (type bmp)
+<figure/hw08p4.png>
+ [4] [5]
+File: figure/hw08p5.png Graphic file (type bmp)
+<figure/hw08p5.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
  (./homework.week08.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 100.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `homework.week08.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22354 strings out of 479682
- 420869 string characters out of 5891585
- 1104420 words of memory out of 5000000
- 39249 multiletter control sequences out of 15000+600000
- 563318 words of font info for 86 fonts, out of 8000000 for 9000
+ 22413 strings out of 479682
+ 422973 string characters out of 5891585
+ 1079420 words of memory out of 5000000
+ 39305 multiletter control sequences out of 15000+600000
+ 566127 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  69i,6n,126p,846b,2199s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.week08.pdf (3 pages).
+Output written on homework.week08.pdf (6 pages).
