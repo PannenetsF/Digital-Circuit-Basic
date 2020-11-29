@@ -1,8 +1,8 @@
-\documentclass[lang=cn,11pt,a4paper,cite=authoryear]{elegantpaper}
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear,twocolumn]{elegantpaper}
 
 \input{needed.tex}
 
-\title{数字电路基础\quad 第十一周作业}
+\title{数字电路基础\quad 第十二周作业}
 \author{范云潜 18373486}
 \institute{微电子学院 184111 班}
 \date{\zhtoday}
@@ -11,35 +11,71 @@
 
 \maketitle
 
-作业内容：7.7，7.8，7.10
+作业内容：8.2，8.5
 
-\homep{7.7}
+\homep{8.2}
 
-\(D_3 = A_3'A_2A_1A_0 + A_3A_2'A_1A_0 + A_3A_2A_1'A_0 + A_3A_2A_1A_0'\) 
+\(Y_1 = (B' A + B A' + C D ) ' \) 
 
-\(D_2 = A_3' A_2' A_1 A_0 + A_3'A_2A_1'A_0 + A_3' A_2 A_1 A_0' + A_3 A_2' A_1' A_0 + A_3 A_2' A_1 A_0 ' + A_3 A_2 A_0' A_1'\) 
+\(Y_2 = (C D' + C' D) A B + Z (AB)' \) 
 
-\(D_1 = A_3'A_2'A_1'A_0 + A_3'A_2'A_1A_0' + A_3' A_2 A_1' A_0' + A_3 A_2' A_1' A_0'\)
+\homep{8.5}
 
-\(D_0 = A_3' A_2' A_1' A_0' + A_3 A_2 A_1 A_0\)
+驱动：
 
+\(Q_0\) 的驱动： \(Q_1' Q_3 + Q_2 Q_3\) 
 
-\homep{7.8}
+\(Q_1\) 的驱动： \(Q_0\) 
 
-\(D_3 = A_3'A_2'A_1'A_0' + A_3'A_2A_1A_0' + A_3A_2'A_1A_0 + A_3A_2A_1A_0'\)
+\(Q_2\) 的驱动： \(Q_1\) 
 
-\(D_2 = A_3' A_2'A_1A_0 + A_3'A_2A_1A_0 + A_3A_2'A_1'A_0\) 
+\(Q_3\) 的驱动： \(Q_2\) 
 
-\(D_1 = A_3'A_2'A_1A_0' + A_3'A_2A_1'A_0' + A_3A_2'A_1'A_0' + A_3A_2'A_1A_0 + A_3A_2A_1A_0\) 
+状态：
 
-\(D_0 = A_3' A_2' A_1' A_0 + A_3'A_2'A_1A_0 + A_3' A_2A_1'A_0 + A_3'A_2A_1A_0 + A_3A_2'A_1'A_0 + A_3A_2'A_1A_0 + A_3A_2A_1'A_0\)
+\(Q_0 {} _{n}  = Q_1' Q_3 + Q_2 Q_3\) 
 
+\(Q_1 {} _{n}  = Q_0\) 
 
+\(Q_2 {} _{n}  = Q_1\) 
 
-\homep{7.10}
+\(Q_3 {} _{n}  = Q_2\) 
 
-\qfig{hw11.png}{7.10 答案}
+输出：
 
+\(Y = Q_0 + Q_1 + Q_2 + Q_3\) 
+
+状态图(按照1的个数排序)：
+
+0000->0000
+
+0001->0010
+0010->0100
+0100->1000
+1000->0001
+
+0011->0110
+0110->1100
+1100->1001
+1001->0011
+
+0101->1010
+1010->0100
+
+0111->1110
+1110->1101
+1101->1011
+1011->0110
+
+1111->1111
+
+% \qfig{}{状态图}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.45\textwidth]{hw12.png}
+    % \caption{#3}
+    % \label{#1}
+\end{figure}
 % Start Here
 
 % End Here
